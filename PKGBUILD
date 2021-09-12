@@ -65,6 +65,7 @@ build() {
       zlib-dynamic \
       "$LDFLAGS" \
       "$CFLAGS"
+	sed -i -r 's|-fcf-protection||g' Makefile
     make
   done
 }
